@@ -1,17 +1,18 @@
 /* FILE:    SMARTLCDI2C.cpp
-   DATE:    03/01/23
-   VERSION: 0.4
+   DATE:    10/02/25
+   VERSION: 0.4.1
    AUTHOR:  Andrew Davies
    WEBSITE: HobbyComponents.com
 
-12/07/17 version 0.1: 	Original version
-04/02/22 version 0.2: 	Added new example (SmartLCD_Custom_Character_Example2) to show how to use existing public domain characters. Thanks to Håkon Løvdal.
-			Fixed issue that caused a compiler error when passing a char array to some functions.  Thanks to Håkon Løvdal.
-			Fixed an invalid token name for note NOTE_AS.  Thanks to Håkon Løvdal.
-			Added type case to requestFrom to fix compiler error. Thanks to Håkon Løvdal.
-26/04/22 version 0.3:	Added option to print floating point numbers via the Print() function.
-03/01/23 version 0.4:	Added additional Print() function that allows row/col to be specified and also supports printing off screen
+12/07/17 version 0.1.0: Original version
+04/02/22 version 0.2.0: Added new example (SmartLCD_Custom_Character_Example2) to show how to use existing public domain characters. Thanks to Håkon Løvdal.
+						Fixed issue that caused a compiler error when passing a char array to some functions.  Thanks to Håkon Løvdal.
+						Fixed an invalid token name for note NOTE_AS.  Thanks to Håkon Løvdal.
+						type case to requestFrom to fix compiler error. Thanks to Håkon Løvdal.
+26/04/22 version 0.3.0:	Added option to print floating point numbers via the Print() function.
+03/01/23 version 0.4.0:	Added additional Print() function that allows row/col to be specified and also supports printing off screen
 						Added ScrollText() function that allows text to be horizontally scrolled
+10/02/25 VERSION 0.4.1	Removed default argument for print function in cpp file as it was causing a compile error for ESP devices
 
 
 Arduino I2C library for the Hobby Components Smart LCD.
@@ -161,7 +162,7 @@ void SmartLCD::Print(int Value)
 		val is the floating point number to print
 		dp is the number of decimal places to print to
 */
-void SmartLCD::Print(float val, uint8_t dp = 0)
+void SmartLCD::Print(float val, uint8_t dp)
 {
 	char buffer[20];
 	if(dp > 10)

@@ -1,17 +1,18 @@
 /* FILE:    SMARTLCDI2C.h
-   DATE:    03/01/23
-   VERSION: 0.4
+   DATE:    10/02/25
+   VERSION: 0.4.1
    AUTHOR:  Andrew Davies
    WEBSITE: HobbyComponents.com
 
-12/07/17 version 0.1: 	Original version
-04/02/22 version 0.2: 	Added new example (SmartLCD_Custom_Character_Example2) to show how to use existing public domain characters. Thanks to Håkon Løvdal.
-			Fixed issue that caused a compiler error when passing a char array to some functions.  Thanks to Håkon Løvdal.
-			Fixed an invalid token name for note NOTE_AS.  Thanks to Håkon Løvdal.
-			Added type case to requestFrom to fix compiler error. Thanks to Håkon Løvdal.
-26/04/22 version 0.3:	Added option to print floating point numbers via the Print() function.
-03/01/23 version 0.4:	Added additional Print() function that allows row/col to be specified and also supports printing off screen
+12/07/17 version 0.1.0: Original version
+04/02/22 version 0.2.0: Added new example (SmartLCD_Custom_Character_Example2) to show how to use existing public domain characters. Thanks to Håkon Løvdal.
+						Fixed issue that caused a compiler error when passing a char array to some functions.  Thanks to Håkon Løvdal.
+						Fixed an invalid token name for note NOTE_AS.  Thanks to Håkon Løvdal.
+						type case to requestFrom to fix compiler error. Thanks to Håkon Løvdal.
+26/04/22 version 0.3.0:	Added option to print floating point numbers via the Print() function.
+03/01/23 version 0.4.0:	Added additional Print() function that allows row/col to be specified and also supports printing off screen
 						Added ScrollText() function that allows text to be horizontally scrolled
+10/02/25 VERSION 0.4.1	Removed default argument for print function in cpp file as it was causing a compile error for ESP devices
 			
 			
 
